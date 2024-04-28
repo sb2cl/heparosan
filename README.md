@@ -22,7 +22,7 @@ The file `model_hep6p.m` contains the ODE model definition. The file `Main_anthi
 
 **scripts/for_plot** 
 
-* Scripts necessary to obtain the plots of the manuscript.
+Scripts necessary to obtain the plots of the manuscript.
 
 
 

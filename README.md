@@ -18,7 +18,7 @@ Included within this directory are all the scripts required to execute the simul
 
 **ODE Model**
 
-The file `model_hep6p.m` contains the ODE model definition. The file `Main_anthitetic_marker.m` contains the script to run the model, and to obtain simulation results like in the next figure. The parameters of the model are implemented in the function `parameters.m`. 
+The file `model_hep6p.m` contains the ODE model definition. The parameters of the model are implemented in the function `parameters.m`. 
 
 **scripts/for_plot** 
 

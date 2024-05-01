@@ -7,9 +7,9 @@ We used Matlab version 23.2.0.2485118 (R2023b) Update 6, we did not test if this
 
 ## Repository structure
 
-**scripts/** 
- 
 Included within this directory are all the scripts required to execute the simulations and optimizations, yielding the results showcased in the manuscript. This repository encapsulates everything essential for reproducing the findings detailed in the paper.
+
+### /optimization
 
 **Files to use MEIGO optimization algorithm**
 
@@ -20,9 +20,11 @@ Included within this directory are all the scripts required to execute the simul
 
 The file `model_hep6p.m` contains the ODE model definition. The parameters of the model are implemented in the function `parameters.m`. 
 
-**scripts/for_plot** 
+### /robustness 
 
 Scripts necessary to obtain the plots of the manuscript. Run `Simulation_and_plot_perturbation.m` to get the different plots used in the manuscript to illustrate the results.
+
+### /fba
 
 
 

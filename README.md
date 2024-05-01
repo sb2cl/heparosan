@@ -11,20 +11,32 @@ Included within this directory are all the scripts required to execute the simul
 
 ### /optimization
 
-**Files to use MEIGO optimization algorithm**
-
-* The file `optmize_with_MEIGO.m` is used to call the optimization algorithm used [MEIGO](https://github.com/gingproc-IIM-CSIC/MEIGO64). Check the `EXAMPLES` folder within the repository for more info on how to use it. In this case, the file `optimize_with_MEIGO.m` includes all the parameters necessary for the execution with our cost function `CostFunction_HEP.m`.
-* File `CostFunction_HEP.m` contains the implementation of the cost function for our multiobjective optimization problem.
-
 **ODE Model**
 
 The file `model_hep6p.m` contains the ODE model definition. The parameters of the model are implemented in the function `parameters.m`. 
 
+**Files to use MEIGO optimization algorithm**
+
+* File `CostFunction_HEP.m` contains the implementation of the cost function for our multiobjective optimization problem.
+* The file `optimize_with_MEIGO.m` is used to call the optimization algorithm used [MEIGO](https://github.com/gingproc-IIM-CSIC/MEIGO64). Check the `EXAMPLES` folder within the MEIGO repository for more info on how to use it. In this case, the file `optimize_with_MEIGO.m` includes all the parameters necessary for the execution with our cost function `CostFunction_HEP.m`.
+
 ### /robustness 
 
-Scripts necessary to obtain the plots of the manuscript. Run `Simulation_and_plot_perturbation.m` to get the different plots used in the manuscript to illustrate the results.
-
+Scripts for the robustness analysis.
+* `Simulation_and_plot_perturbation.m` script is used to get the different plots for the manuscript to illustrate the results.
+* `Optimal_Values_Calculation.mlx` script calculates the uncertainties of the optimum values using the gaussian process.
+* `distributuions_optim.mlx` and `distributuions_random.mlx` scripts calculate the optimum and random distributions using values of PDI and Mw for the two sets of data: optimal values from the optimization and random values.
+* `level_diagram_plot.m` plot the PDI data against MW, and the precursors concentraitons for Figure 4 of the manuscript.
+* `results_cL1_10_cL2_10_cU1_20_cU2_20_date_20240331_154057.mat` has the optimization results in Matlab format. 
+* `tablaOutput.mat` compiles the results in a table format.                                              
 ### /fba
+
+We include all the code used to develop the flux balance analysis in different files:
+
+* The original metabolic SBML model **iDK1463**, written as a MATLAB object `nissle_core.mat`.
+* The new metabolic SBML model including the heparosan biosynthesis pathway (metabolites, enzymes, and reactions), written as matlab object `nissle_core_heparosan.mat`.
+* The COBRA file `FBA_heparosan.mlx` (Matlab LiveScript) to add the heparosan biochemical reactions, and to perform the FBA.
+
 
 
 

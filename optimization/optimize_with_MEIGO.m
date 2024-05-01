@@ -12,15 +12,16 @@ dbstop if error
 
 %========================= PROBLEM SPECIFICATIONS ===========================
 problem.f='CostFunction_HEP'; %mfile containing the objective function
+ 
+problem.x_L = [0.1 0.1 0.1 ]; %Lower bound for parameters
+problem.x_U = [ 10 10 4.8 ];  %Upper bound for parameters
+problem.x0 = [7.1273    1.7276    1.6621]; %Initial guess parameters
 
-problem.x_L = [0.1 0.1 0.1 ];
-problem.x_U = [ 10 10 4.8 ]; 
 problem.neq = 0; % Number of equalities
-problem.c_L = [10 10  0 0 0 0 -7.5 -7.5];
-problem.c_U = [20 20  7.5 7.5 7.5 7.5  0  0];  
-problem.x0 = [7.1273    1.7276    1.6621];
-opts.maxeval=500;
+problem.c_L = [10 10  0 0 0 0 -7.5 -7.5]; %Lower bound constraint
+problem.c_U = [20 20  7.5 7.5 7.5 7.5  0  0];  %Upper bound constraint
 
+opts.maxeval=500;
 opts.ndiverse=25;
 opts.local.solver='dhc';
 opts.local.finish='dhc';

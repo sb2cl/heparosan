@@ -22,7 +22,7 @@ The file `model_hep6p.m` contains the ODE model definition. The parameters of th
 
 **scripts/for_plot** 
 
-Scripts necessary to obtain the plots of the manuscript.
+Scripts necessary to obtain the plots of the manuscript. Run `Simulation_and_plot_perturbation.m` to get the different plots used in the manuscript to illustrate the results.
 
 
 

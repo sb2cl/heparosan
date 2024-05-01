@@ -1,3 +1,14 @@
+% Optimization of PDI and Mw of Hepraosan using ODE model for the genetic
+% and metabolic circuits and GP to model the relationship between the PDI
+% Mw and the precursors.
+% Plot optimal results.
+% Updated 28/04/2024 by Yadira Boada, Alejandro Vignoni
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Perturbations used thoughout the file
+% pert = [0.6 0.8 1 1.2 1.4] multiplicative variations in the GlcUA
+% availability.
+
 load('results_cL1_10_cL2_10_cU1_20_cU2_20_date_20240331_154057.mat')
 p = Results.xbest
 [a, b]=CostFunction_HEP(p,0.6,3,0)
